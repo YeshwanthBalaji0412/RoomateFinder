@@ -1,0 +1,55 @@
+
+Instructions to Set Up and Run the Project
+Install Required Software
+1. Eclipse IDE: Ensure Eclipse is installed on your system.
+2. JavaFX SDK: Download and extract the JavaFX SDK (https://openjfx.io/).
+3. MySQL: Install MySQL and MySQL Workbench.
+
+
+Setting Up the Project
+
+Step 1: Add JavaFX Dependencies
+1. Download JavaFX SDK:
+   - Extract the JavaFX SDK folder to a known location on your system.
+2. Add JavaFX to Eclipse:
+   - Right-click on your project in Eclipse and navigate to Properties.
+   - Go to Java Build Path > Libraries > ModulePath.
+   - Click Add External JARs... and select the lib folder of the JavaFX SDK.
+   - Click Apply and Close.
+
+Step 2: Add MySQL Connector
+1. Download MySQL Connector:
+   - Get the MySQL Connector JAR from the [official website](https://dev.mysql.com/downloads/connector/j/).
+2. Add Connector to Eclipse:
+   - In the same Properties > Java Build Path > ModulePath, click Add External JARs....
+   - Select the MySQL Connector JAR file and click Apply and Close.
+
+Configure Run Settings
+1. Open Run Configurations:
+   - Right-click on your project and select Run As > Run Configurations....
+2. Add JavaFX Arguments:
+   - In the Arguments tab, add the following in the VM Arguments field:
+     --add-modules javafx.controls,javafx.fxml
+3. Set ModulePath:
+   - Go to the Classpath tab.
+   - Ensure both JavaFX libraries and MySQL Connector are added under ModulePath.
+4. Uncheck Checkboxes:
+   - In the run configuration settings, deselect all optional checkboxes and keep them at their default settings.
+5. Apply Changes:
+   - Click Apply and then Run.
+
+Set Up the Database
+1. Import the Database Dump:
+   - Open MySQL Workbench.
+   - Create a new database/schema.
+   - Use the Import feature to import the provided database dump file into your schema.
+2. Ensure Local Access:
+   - This project uses a locally stored database.
+
+Run the Project
+1. Ensure All Dependencies Are Set:
+   - JavaFX libraries and MySQL Connector JAR must be configured.
+2. Run the Application:
+   - Right-click on the main class file and select Run As > Java Application.
+
+
